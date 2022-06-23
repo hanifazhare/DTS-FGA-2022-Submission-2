@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/DTS-FGA-2022-Submission-2/static/css/main.dbb5709c.css",
+    "main.js": "/DTS-FGA-2022-Submission-2/static/js/main.7ebe0211.js",
+    "static/js/787.a5cad257.chunk.js": "/DTS-FGA-2022-Submission-2/static/js/787.a5cad257.chunk.js",
+    "index.html": "/DTS-FGA-2022-Submission-2/index.html",
+    "main.dbb5709c.css.map": "/DTS-FGA-2022-Submission-2/static/css/main.dbb5709c.css.map",
+    "main.7ebe0211.js.map": "/DTS-FGA-2022-Submission-2/static/js/main.7ebe0211.js.map",
+    "787.a5cad257.chunk.js.map": "/DTS-FGA-2022-Submission-2/static/js/787.a5cad257.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dbb5709c.css",
+    "static/js/main.7ebe0211.js"
+  ]
+}
