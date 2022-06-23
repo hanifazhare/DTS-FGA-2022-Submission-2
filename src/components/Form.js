@@ -10,24 +10,20 @@ const theme = createTheme({
 });
 
 const Form = () => {
+    const [todoList, setTodos] = useState(() => {
+        const checkSavedTodoList = localStorage.getItem("todoList");
+        const loadTodoList = JSON.parse(checkSavedTodoList);
+    
+        return checkSavedTodoList ? loadTodoList : [
+            {
+                text: "Learn about ReactJS",
+                isCompleted: false,
+                isChecked: false,
+                isEditing: false
+            }
+        ]
+    });
     const [newTodo, setNewTodo] = useState('');
-    const [todoList, setTodos] = useState([
-        {
-            text: "Learn about Git",
-            isCompleted: false,
-            isEditing: false
-        },
-        {
-            text: "Learn about JavaScript",
-            isCompleted: false,
-            isEditing: false
-        },
-        {
-            text: "Learn about ReactJS",
-            isCompleted: false,
-            isEditing: false
-        }
-    ]);
     const [isInputEmpty, setInputEmpty] = useState(false);
     const editTodoRef = useRef({});
 
@@ -62,6 +58,7 @@ const Form = () => {
     const completeTodo = (index) => {
         const todos = [...todoList];
         todos[index].isCompleted = !todos[index].isCompleted;
+        todos[index].isChecked = !todos[index].isChecked;
         setTodos(todos);
     };
 
@@ -88,7 +85,7 @@ const Form = () => {
     };
 
     useEffect(() => {
-        
+        localStorage.setItem("todoList", JSON.stringify(todoList));
     }, [todoList]);
 
     return (
